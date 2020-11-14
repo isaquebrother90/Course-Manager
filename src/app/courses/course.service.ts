@@ -4,8 +4,11 @@ import { Course } from './course';
 @Injectable({ //Elegível para dependência
     providedIn: 'root'  //Para ser carregado na root da aplicação
 })
-export class CourseService {
 
+export class CourseService {
+    retrieveAll(): Course[] {
+        return COURSES;
+    }
 }
 
 var COURSES: Course[] = [
